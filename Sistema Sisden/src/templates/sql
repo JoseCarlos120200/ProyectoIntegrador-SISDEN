@@ -1,0 +1,13 @@
+sql
+SELECT * from events where`start_event` between date_sub(concat(curdate()," 00:00:00"), INTERVAL 2 DAY) and concat(curdate()," 23:59:59") AND `clinica`='Morelos';
+select * from events where `start_event` between curdate() + interval 6 hour and curdate() + interval 1 day + interval 23 hour;
+SELECT * from events where`start_event` between date_sub(concat(curdate()," 09:00:00"), INTERVAL 5 HOUR) and concat(curdate()," 14:00:00") AND `clinica`='Morelos';
+select * from events where `start_event` between curdate() + interval 9 hour and curdate() + interval 1 HOUR + interval 14 hour;
+
+
+SELECT * from events where`start_event` between date_sub(concat(curdate()," 09:00:00"), INTERVAL 5 HOUR) and concat(curdate()," 14:00:00") AND `clinica`='Morelos';
+select * from events where `start_event` between curdate() + interval 9 hour and curdate() + interval 1 HOUR + interval 14 hour;
+
+
+select * from events where `consultorio`='1' AND `start_event` between curdate() + interval 9 hour and curdate() + interval 14 hour;
+select * from events where `consultorio`='1' AND `start_event` between curdate() + interval 15 hour and curdate() + interval 20 hour;

@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block body %}
+<style> 
+.table-wrapper {
+  width: 100%;
+  height: 200px; /* Altura de ejemplo */
+  overflow: auto;
+}
+
+.table-wrapper table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-wrapper table thead {
+  position: -webkit-sticky; /* Safari... */
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.table-wrapper table thead th,
+.table-wrapper table tbody td {
+  
+  background-color: #FFF;
+}
+ </style>
+ <div class="container-fluid">
+   <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Usuario Nuevo</h4>
+     
+        <form class="needs-validation" action="{{url_for('add_event')}}" enctype="multipart/form-data" method="POST">
+  
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Nombre</label>
+              <input id="nombrepaciente" name="nombrepaciente" type="text" class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Apellido</label>
+              <input type="text" class="form-control" id="apellidopaciente" name="apellidopaciente"  value="" required>
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Telefono</label>
+              <input type="text" class="form-control" id="telefonopaciente" name="telefonopaciente"  value="" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Clinica</label>
+              <select name="clinicapaciente" class="form-control">
+                {% for o in data1 %}
+                <option value="{{ o.1 }}">{{ o.1 }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Entrada</label>
+              <input type="text" class="form-control" id="placa" name="placa" placeholder="Placa" value="{{data.0}}" require >
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Salida</label>
+              <input type="text" class="form-control" id="color" name="color" placeholder="Placa" value="{{data.1}}" require >
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Clinica</label>
+              <input type="text" class="form-control" id="marca" name="marca" placeholder="Placa" value="{{data.2}}" require >
+            </div>
+            
+          </div>
+          
+          <hr class="mb-4">
+          
+          <div class="d-grid gap-2 col-6 mx-auto">
+           
+            <button class="btn btn-primary" type="submit">Registrar</button>
+          </div>
+        </form>
+      </div>
+
+
+  </div></div>
+</body>
+
+{% endblock %}

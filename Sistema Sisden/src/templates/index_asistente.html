@@ -1,0 +1,48 @@
+{% extends "layout_login.html" %}
+{% block body %}
+<style> 
+.table-wrapper {
+  width: 100%;
+  height: 200px; /* Altura de ejemplo */
+  overflow: auto;
+}
+
+.table-wrapper table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-wrapper table thead {
+  position: -webkit-sticky; /* Safari... */
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.table-wrapper table thead th,
+.table-wrapper table tbody td {
+  
+  background-color: #FFF;
+}
+ </style>
+<div id="reporte" class="container-fluid">
+   <div class="col-md-8 order-md-1">
+        <h2 class="mb-3">Consultar citas</h2>
+        <h1 class="display-4" type="hidden" >Hola!{{ current_user.fullname }}</h1>
+        
+       
+        <form method="POST" action="{{url_for('calendar_asistente')}}">
+          <input id="comp_select" name="comp_select" type="hidden" value="{{ current_user.id }}">
+            <br>
+          <center><button class="btn btn-primary" type="submit">Ver citas de la clinica</button></center>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/1.png') }}" alt="" width="100%" height="300" >
+      </div>
+  </div>
+</div>
+
+</body>
+
+{% endblock %}

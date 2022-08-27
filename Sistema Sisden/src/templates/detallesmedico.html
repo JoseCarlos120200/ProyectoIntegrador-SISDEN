@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <div class="row">
+    <div class="col-md-3 offset-md-3">
+    </div>
+    <div class="col-md-6 offset-md-3">
+      <div class="card card-body">
+ 
+        <div class="col-md-12">
+          <center>
+          <h4 class="mb-3">Datos de cita</h4>
+          <form class="needs-validation" action="{{url_for('pagado')}}" enctype="multipart/form-data" method="POST">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Total</label>
+                <input type="text" class="form-control" id="total" name="total" placeholder="" value="{{coches.0}}" required >
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Folio</label>
+                <input type="text" class="form-control" id="id" name="id" placeholder="" value="{{coches.1}}" required >
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Estado</label>
+                <input type="text" class="form-control" id="estado" name="estado" placeholder="Placa" value="Pagado" required >
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Entrada</label>
+                <input type="text" class="form-control" id="entrada" name="entrada" placeholder="Color" value="{{coches.3}}" required >
+              </div>
+            </div> 
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Salida</label>
+                <input type="text" class="form-control" id="salida" name="salida" placeholder="Placa" value="{{coches.4}}" required >
+              </div>
+              
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Placa" value="{{coches.5}}" required >
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="Apellido" placeholder="Placa" value="{{coches.7}}" required >
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Medico</label>
+                <input type="text" class="form-control" id="medico" name="medico" placeholder="Placa" value="{{current_user.fullname}}" required >
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Servicio</label>
+                <input type="text" class="form-control" id="servicio" name="servicio" placeholder="Placa" value="{{coches.8}}" required >
+              </div>
+              
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Numero</label>
+                <input type="text" class="form-control" id="numero" name="numero" placeholder="Placa" value="{{coches.9}}" required >
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Clinica</label>
+                <input type="text" class="form-control" id="clinica" name="clinica" placeholder="Placa" value="{{coches.10}}" required >
+              </div>
+              
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Consultorio</label>
+                <input type="text" class="form-control" id="consultorio" name="consultorio" placeholder="Placa" value="{{coches.11}}" required >
+              </div>
+            </div>
+                
+          
+            <hr class="mb-4">
+            <center><button type="submit" class="btn btn-primary">Pagar</button></center>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</center>
+  
+
+{% endblock %}

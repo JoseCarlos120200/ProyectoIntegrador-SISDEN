@@ -1,0 +1,97 @@
+{% extends "layout_login.html" %}
+{% block body %}
+<style> 
+.table-wrapper {
+  width: 100%;
+  height: 200px; /* Altura de ejemplo */
+  overflow: auto;
+}
+
+.table-wrapper table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-wrapper table thead {
+  position: -webkit-sticky; /* Safari... */
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.table-wrapper table thead th,
+.table-wrapper table tbody td {
+  
+  background-color: #FFF;
+}
+ </style>
+<div id="reporte" class="container-fluid">
+   <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Servicio Nuevo</h4>
+        <form class="needs-validation" action="{{url_for('insertservicios')}}" method="POST">
+          
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Nombre</label>
+              <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Precio</label>
+              <input type="number" class="form-control" id="precio" name="precio" placeholder="precio" value="" required>
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Descripción</label>
+              <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion" value="" required>
+            </div> 
+          </div>    
+          <hr class="mb-4">
+          
+          <div class="d-grid gap-2 col-6 mx-auto">
+           
+            <center><button class="btn btn-primary" type="submit">Registrar</button></center>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/1.png') }}" alt="" width="100%" height="300" >
+      </div>
+      <div>
+        <br>
+      </div>
+      <div class="table-wrapper">
+        <table class="table">
+           <thead class="thead-dark">
+              <tr>
+                 <th class="header" scope="col">ID</th>
+                 <th class="header" scope="col">Correo</th>
+                 <th class="header" scope="col">Nombre</th>
+                 <th class="header" scope="col">Clinica</th>
+              </tr>
+           </thead>
+           <tbody>
+            {% for servicios in servicios %}
+                  <tr>
+                    <td>{{servicios.0}}</td>
+                    <td>{{servicios.1}}</td>
+                    <td>{{servicios.2}}</td>
+                    
+                    <td>{{servicios.3}}</td>
+                    
+                   
+                      
+                      
+                    </td>
+                  </tr>
+            {% endfor %}
+           </tbody>
+        </table>
+      </div>
+
+      
+  </div>
+  </body>
+
+{% endblock %}

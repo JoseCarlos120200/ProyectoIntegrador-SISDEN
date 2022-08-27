@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <div class="row">
+    <div class="col-md-3 offset-md-3">
+    </div>
+    <div class="col-md-6 offset-md-3">
+      <div class="card card-body">
+ 
+        <div class="col-md-12">
+          <center>
+          <h4 class="mb-3">Datos del usuario</h4>
+          <form class="needs-validation" action="/pago/{{coches.0}}" method="POST">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="{{coches.3}}" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Correo</label>
+                <input type="text" class="form-control" id="correo" name="correo" placeholder="" value="{{coches.1}}" required>
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Placa" value="{{coches.2}}" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Estado</label>
+                <input type="text" class="form-control" id="estado" name="estado" placeholder="Color" value="{{coches.4}}" required>
+              </div>
+            </div> 
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Rol</label>
+                <input type="text" class="form-control" id="rol" name="rol" placeholder="Placa" value="{{coches.5}}" required>
+              </div>
+              
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Clinica</label>
+                <input type="text" class="form-control" id="clinica" name="clinica" placeholder="Placa" value="{{coches.6}}" required>
+              </div>
+            </div>
+
+                
+          
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-block" type="submit">Aceptar</button>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</center>
+  
+
+{% endblock %}

@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+{% block body %}
+ <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+ <style> 
+.table-wrapper {
+  width: 100%;
+  height: 200px; /* Altura de ejemplo */
+  overflow: auto;
+}
+
+.table-wrapper table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-wrapper table thead {
+  position: -webkit-sticky; /* Safari... */
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.table-wrapper table thead th,
+.table-wrapper table tbody td {
+  
+  background-color: #FFF;
+}
+ </style>
+ </head>
+ <body>
+  <br />
+
+  <h2 align="center"><a href="#">Citas disponibles en {{data}}</a></h2>
+  <h2 align="center" id='clinica'>{{data}}</h2>
+  <br />
+  <div class="container">
+   <div class="table-wrapper">
+        <table class="table">
+           <thead class="thead-dark">
+              <tr>
+                 <th class="header" scope="col">ID</th>
+                 <th class="header" scope="col">Estado</th>
+                 <th class="header" scope="col">Inicio</th>
+                 <th class="header" scope="col">Nombre</th>
+                 <th class="header" scope="col">Apellido</th>
+                 <th class="header" scope="col">Servicio</th>
+                 <th class="header" scope="col">Detalles</th>
+              </tr>
+           </thead>
+           <tbody>
+            {% for coches in calendar %}
+                  <tr>
+                    <td>{{coches.0}}</td>
+                    <td>{{coches.1}}</td>
+                    <td>{{coches.2}}</td>
+                    <td>{{coches.4}}</td>
+                    <td>{{coches.5}}</td>
+                    <td>{{coches.6}}</td>
+                    <td>
+                      
+                      <a href="/detallescita/{{coches.0}}" class="btn btn-secondary btn-delete">Detalles</a>
+                    </td>
+                  </tr>
+            {% endfor %}
+           </tbody>
+        </table>
+
+      </div>
+      <br>
+      <center><a class="btn btn-primary btn-block" href="{{ url_for('homedos') }}">Regresar a inicio</a></center>
+    
+ </body>
+</html>
+{% endblock %}

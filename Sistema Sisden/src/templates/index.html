@@ -1,0 +1,200 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Container (About Section) -->
+<div id="nosotros" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8" align="justify">
+      <h2>Sobre nosotros.</h2><br>
+      <h4>Somos una clínica dental especializada, ubicada en Cuernavaca, Morelos. En Clínica Dental Muelitas tenemos a dentistas expertos en ortopedia dental y cirugía maxilofacial.</h4><br>
+      <p>Con más de 39 años de experiencia, nuestro grupo de especialistas en ortopedia dental ofrece un servicio de calidad con los requerimientos solicitados por nuestros pacientes, así como la mejor atención profesional, personalizada y humana.
+      Estamos actualizados en el área de odontología y sus especialidades como cirugía maxilofacial para brindar un servicio de calidad y, asimismo, poder darte el tratamiento específico para atacar cualquier enfermedad que ponga en riesgo tu salud bucal.</p>
+    </div>
+    <div class="col-sm-4 slideanim">
+      
+      <img src="{{ url_for('static', filename='img/1.png') }}" alt="" width="100%" height="400" >
+
+    
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon  glyphicon-heart-empty logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>VALORES</h2><br>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="servicios" class="container-fluid text-center bg-grey">
+  <h2>Servicios</h2><br>
+  <h4>Te ofrecemos</h4>
+  <div class="row text-center ">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{{ url_for('static', filename='img/3.png') }}" alt="Paris" width="400" height="300">
+        <p><strong>Radiología Dental</strong></p>
+        <p> Diagnóstico, prevención y el tratamiento de las irregularidades dentales y faciales.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{{ url_for('static', filename='img/4.jpg') }}" alt="New York" width="400" height="300">
+        <p><strong>Limpiez denta</strong></p>
+        <p>Es aquella técnica que limpia todas esas zonas donde no llegas con tu cepillado normal.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{{ url_for('static', filename='img/5.jpg') }}" alt="San Francisco" width="400" height="300">
+        <p><strong>Blanqueamiento</strong></p>
+        <p>Ayuda a eliminar las manchas y a recuperar el color natural de los dientes</p>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  
+  <h2>Opiniones</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Me encantan las clinicas son muy limpias!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Te dan dulces gratis!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Arreglaron mis muelas y no tuve dolor"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="ubicaciones" class="container-fluid">
+  <div class="text-center">
+    <h2>Ubicaciones</h2>
+    <h4>Estamos mas cerca de ti...</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>CDMX</h1>
+        </div>
+        <div class="panel-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.8286909619446!2d-99.20292418510229!3d18.850283387217846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdd8bad2a5ef7d%3A0xddfd0f46aac691ee!2sUniversidad%20Tecnol%C3%B3gica%20Emiliano%20Zapata%20UTEZ!5e0!3m2!1ses!2smx!4v1661036538864!5m2!1ses!2smx" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="panel-footer">
+          <h3>Av.Reforma #45</h3>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Morelos</h1>
+        </div>
+        <div class="panel-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.8286909619446!2d-99.20292418510229!3d18.850283387217846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdd8bad2a5ef7d%3A0xddfd0f46aac691ee!2sUniversidad%20Tecnol%C3%B3gica%20Emiliano%20Zapata%20UTEZ!5e0!3m2!1ses!2smx!4v1661036538864!5m2!1ses!2smx" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="panel-footer">
+          <h3>Av.Univeridad, E.Zapata</h3>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Puebla</h1>
+        </div>
+        <div class="panel-body">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.8286909619446!2d-99.20292418510229!3d18.850283387217846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdd8bad2a5ef7d%3A0xddfd0f46aac691ee!2sUniversidad%20Tecnol%C3%B3gica%20Emiliano%20Zapata%20UTEZ!5e0!3m2!1ses!2smx!4v1661036538864!5m2!1ses!2smx" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="panel-footer">
+          <h3>Av.Morelos,puebla</h3>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="citas" class="container-fluid bg-grey">
+ 
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contactate con nosotros por:</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Zapata,Mor.</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 01(55)777324567</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> contacto@drmuelitas.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <h2 class="text-center">Te recordamos que contamos con dos horarios, vespertino y matutino, ademas de contar con diferentes clinicas. 
+        Es importante que prestes atencion cuando hagas tu cita. 
+        </h2>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-12 form-group" align="center">
+          <form action="{{url_for('calendar')}}" enctype="multipart/form-data" method="POST">
+              <label for="exampleFormControlSelect2">Elige una clinica</label>
+              <select multiple class="form-control" name="clinica" id="clinica" >
+                <option value="Cdmx">Cdmx</option>
+                <option value="Morelos"  >Morelos</option>
+                <option value="Puebla">Puebla</option>
+              </select>
+            <br>
+            <center><button type="submit" class="btn btn-primary">Agendar cita</button></center>
+          </form>
+        </div>
+        <br>
+
+        <div class="col-sm-12 form-group" align="center">
+          <center><h2>Cancelar cita</h2></center>
+          <form action="{{url_for('cancelar')}}" enctype="multipart/form-data" method="POST">
+              <label for="exampleFormControlSelect2">Folio</label>
+              <input type="text" class="form-control" id="cancelarid" name="cancelarid" placeholder="Folio" value="" required>
+            <br>
+            <label for="exampleFormControlSelect2">Telefono</label>
+              <input type="text" class="form-control" id="cancelartel" name="cancelartel" placeholder="Telefono" value="" required>
+            <center><button type="submit" class="btn btn-primary">Cancela cita</button></center>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+{% endblock %}
